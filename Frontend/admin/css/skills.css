@@ -1,0 +1,2 @@
+.icon-input-integration { display: flex; gap: 12px; align-items: center; }
+.live-preview-box-icon { width: 46px; height: 46px; background: var(--adm-bg); border: 1px solid var(--adm-border); display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 20px; color: var(--adm-clay); }

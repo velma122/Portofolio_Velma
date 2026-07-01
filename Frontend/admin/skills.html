@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Skills</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-frame">
+        <aside class="adm-sidebar">
+            <div class="sidebar-logo">VelmaControl</div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="profiles.html"><i class="fa-solid fa-user-gear"></i> Profiles</a></li>
+                <li class="active"><a href="skills.html"><i class="fa-solid fa-graduation-cap"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                <li class="nav-footer-btn" id="action-logout"><a href="#"><i class="fa-solid fa-power-off"></i> Keluar</a></li>
+            </ul>
+        </aside>
+
+        <main class="adm-panel">
+            <header class="panel-header">
+                <h1>Master Data Keahlian</h1>
+                <button class="btn-action-primary" onclick="openSkillModal()"><i class="fa-solid fa-plus"></i> Tambah Skill</button>
+            </header>
+
+            <div class="table-responsive">
+                <table class="table-adm">
+                    <thead>
+                        <tr>
+                            <th>Pratinjau</th>
+                            <th>Nama Keahlian</th>
+                            <th>Kelas Kelas Ikon</th>
+                            <th>Aksi Operasional</th>
+                        </tr>
+                    </thead>
+                    <tbody id="skills-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-backdrop" id="skill-modal">
+        <div class="modal-box">
+            <h2 class="modal-header" id="modal-skill-title">Tambah Keahlian Baru</h2>
+            <form id="form-skill-crud">
+                <input type="hidden" id="skill-id">
+                <div class="form-group-adm">
+                    <label>Nama Keahlian</label>
+                    <input type="text" id="sk-nama" required placeholder="Contoh: Python, Flask">
+                </div>
+                <div class="form-group-adm">
+                    <label>FontAwesome Icon Class</label>
+                    <div class="icon-input-integration">
+                        <input type="text" id="sk-icon" placeholder="fa-brands fa-python" required>
+                        <div class="live-preview-box-icon" id="sk-icon-preview"><i class="fa-solid fa-question"></i></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-modal" onclick="closeSkillModal()">Batal</button>
+                    <button type="submit" class="btn-action-primary">Simpan Record</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/skills.js"></script>
+</body>
+</html>

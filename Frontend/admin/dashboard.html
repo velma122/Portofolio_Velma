@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Dashboard</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-frame">
+        <aside class="adm-sidebar">
+            <div class="sidebar-logo">Velma Control</div>
+            <ul class="sidebar-nav">
+                <li class="active"><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="profiles.html"><i class="fa-solid fa-user-gear"></i> Profiles</a></li>
+                <li><a href="skills.html"><i class="fa-solid fa-graduation-cap"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                <li class="nav-footer-btn" id="action-logout"><a href="#"><i class="fa-solid fa-power-off"></i> Keluar</a></li>
+            </ul>
+        </aside>
+
+        <main class="adm-panel">
+            <header class="panel-header">
+                <div>
+                    <h1 id="welcome-text">Selamat Datang</h1>
+                    <p style="font-size: 13px; color: #888;">Pemantauan metrik portofolio utama Anda.</p>
+                </div>
+            </header>
+
+            <section class="stat-row-cards">
+                <div class="stat-box">
+                    <div class="sb-info"><h3>Total Pengalaman</h3><p id="stat-exp">0</p></div>
+                    <i class="fa-solid fa-business-time"></i>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-info"><h3>Katalog Projek</h3><p id="stat-proj">0</p></div>
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div class="stat-box">
+                    <div class="sb-info"><h3>Keahlian Terindeks</h3><p id="stat-skills">0</p></div>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </section>
+
+            <section class="activity-container">
+                <h2>Aktivitas Pembaruan Terkini</h2>
+                <ul id="activity-log-list" class="activity-timeline-list">
+                    </ul>
+            </section>
+        </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

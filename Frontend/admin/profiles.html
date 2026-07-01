@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Profiles</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/profiles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-frame">
+        <aside class="adm-sidebar">
+            <div class="sidebar-logo">Velma Control</div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li class="active"><a href="profiles.html"><i class="fa-solid fa-user-gear"></i> Profiles</a></li>
+                <li><a href="skills.html"><i class="fa-solid fa-graduation-cap"></i> Skills</a></li>
+                <li><a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                <li class="nav-footer-btn" id="action-logout"><a href="#"><i class="fa-solid fa-power-off"></i> Keluar</a></li>
+            </ul>
+        </aside>
+
+        <main class="adm-panel">
+            <header class="panel-header">
+                <h1>Pengaturan Profil Biodata</h1>
+            </header>
+
+            <form id="form-profile-admin" class="profile-layout-grid-top">
+                <div class="profile-main-form-card">
+                    <h3>Edit Biodata Diri</h3>
+                    <div class="form-row-twin">
+                        <div class="form-group-adm"><label>Nama Lengkap</label><input type="text" name="nama_lengkap" id="p-nama"></div>
+                        <div class="form-group-adm"><label>Nama Panggilan</label><input type="text" name="nama_panggilan" id="p-panggilan"></div>
+                    </div>
+                    <div class="form-row-twin">
+                        <div class="form-group-adm"><label>Tempat Lahir</label><input type="text" name="tempat_lahir" id="p-tempat"></div>
+                        <div class="form-group-adm"><label>Tanggal Lahir</label><input type="date" name="tanggal_lahir" id="p-tgl"></div>
+                    </div>
+                    <div class="form-row-twin">
+                        <div class="form-group-adm"><label>Email Instansi</label><input type="email" name="email" id="p-email"></div>
+                        <div class="form-group-adm"><label>Nomor Telepon</label><input type="text" name="telepon" id="p-telp"></div>
+                    </div>
+                    <div class="form-row-twin">
+                        <div class="form-group-adm"><label>Universitas</label><input type="text" name="universitas" id="p-univ"></div>
+                        <div class="form-group-adm"><label>Fakultas</label><input type="text" name="fakultas" id="p-fak"></div>
+                    </div>
+                    <div class="form-row-triple">
+                        <div class="form-group-adm"><label>Program Studi</label><input type="text" name="prodi" id="p-prodi"></div>
+                        <div class="form-group-adm"><label>Semester</label><input type="number" name="semester" id="p-sem"></div>
+                    </div>
+                    <div class="form-group-adm"><label>Alamat Domisili</label><textarea name="alamat" rows="3" id="p-alamat"></textarea></div>
+                    
+                    <input type="hidden" name="foto_url" id="p-foto-url">
+                    <button type="submit" class="btn-action-primary"><i class="fa-solid fa-floppy-disk"></i> Simpan Sinkronisasi Profil</button>
+                </div>
+
+                <div class="profile-sidebar-upload-card">
+                    <h3>Foto Profil</h3>
+                    <div class="avatar-preview-box">
+                        <img id="avatar-img-view" src="https://res.cloudinary.com/dppi4jove/image/upload/v1782501546/DSCN3884_cdendp.jpg" alt="Avatar">
+                    </div>
+                    <div id="avatar-upload-status" class="upload-status-text">Pilih foto untuk diunggah ke Cloudinary</div>
+                    <input type="file" id="upload-avatar-file" style="display: none;" accept="image/*">
+                    <button type="button" class="btn-upload-trigger" onclick="document.getElementById('upload-avatar-file').click()"><i class="fa-solid fa-camera"></i> Unggah Foto Baru</button>
+                </div>
+            </form>
+
+            <div class="profile-bottom-preview-card">
+                <h3>Preview Data Diri</h3>
+                <div class="profile-details-list">
+                    <div class="detail-item"><strong>Nama Lengkap:</strong> <span id="view-nama-lengkap">Your Full Name</span></div>
+                    <div class="detail-item"><strong>Nama Panggilan:</strong> <span id="view-nama-panggilan">Your Nickname</span></div>
+                    <div class="detail-item"><strong>Tempat, Tanggal Lahir:</strong> <span id="view-ttl">City, 1 Januari 2000</span></div>
+                    <div class="detail-item"><strong>Email:</strong> <span id="view-email">your.email@example.com</span></div>
+                    <div class="detail-item"><strong>Telepon/WA:</strong> <span id="view-telepon">08123456789</span></div>
+                    <div class="detail-item"><strong>Universitas:</strong> <span id="view-universitas">University Name</span></div>
+                    <div class="detail-item"><strong>Fakultas:</strong> <span id="view-fakultas">Faculty Name</span></div>
+                    <div class="detail-item"><strong>Program Studi:</strong> <span id="view-prodi">Study Program</span></div>
+                    <div class="detail-item"><strong>Semester:</strong> <span id="view-semester">Semester 5</span></div>
+                    <div class="detail-item"><strong>Alamat:</strong> <span id="view-alamat">Your Address</span></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/profiles.js"></script>
+</body>
+</html>

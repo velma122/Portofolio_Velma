@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Experience</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-frame">
+        <aside class="adm-sidebar">
+            <div class="sidebar-logo">Velma Control</div>
+            <ul class="sidebar-nav">
+                <li><a href="dashboard.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="profiles.html"><i class="fa-solid fa-user-gear"></i> Profiles</a></li>
+                <li><a href="skills.html"><i class="fa-solid fa-graduation-cap"></i> Skills</a></li>
+                <li class="active"><a href="experience.html"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                <li><a href="projects.html"><i class="fa-solid fa-code-branch"></i> Projects</a></li>
+                <li class="nav-footer-btn" id="action-logout"><a href="#"><i class="fa-solid fa-power-off"></i> Keluar</a></li>
+            </ul>
+        </aside>
+
+        <main class="adm-panel">
+            <header class="panel-header">
+                <h1>Riwayat Pengalaman</h1>
+                <button class="btn-action-primary" onclick="openExpModal()"><i class="fa-solid fa-plus"></i> Tambah Pengalaman</button>
+            </header>
+
+            <div class="table-responsive">
+                <table class="table-adm">
+                    <thead>
+                        <tr>
+                            <th>Posisi Jabatan</th>
+                            <th>Perusahaan/Instansi</th>
+                            <th>Durasi/Periode</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exp-table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-backdrop" id="exp-modal">
+        <div class="modal-box">
+            <h2 class="modal-header" id="modal-exp-title">Form Pengalaman</h2>
+            <form id="form-exp-crud">
+                <input type="hidden" id="exp-id">
+                <div class="form-group-adm"><label>Posisi</label><input type="text" id="ex-posisi" required></div>
+                <div class="form-group-adm"><label>Perusahaan</label><input type="text" id="ex-perusahaan" required></div>
+                <div class="form-group-adm"><label>Durasi/Waktu</label><input type="text" id="ex-durasi" placeholder="Contoh: 2024 - Sekarang" required></div>
+                <div class="form-group-adm"><label>Deskripsi Tugas</label><textarea id="ex-deskripsi" rows="4"></textarea></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close-modal" onclick="closeExpModal()">Batal</button>
+                    <button type="submit" class="btn-action-primary">Simpan Data</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/experience.js"></script>
+</body>
+</html>

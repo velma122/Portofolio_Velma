@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Velma</title>
+    <link rel="stylesheet" href="Frontend/utama/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="Frontend/admin/login.html" class="nav-logo">Velma<span>.</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Selamat Datang<br>di Portofolio<span> Saya</span></h1>
+            <p class="hero-desc">Halo, saya Velma Khoirunnissa. Fokus menciptakan desain antarmuka (UI/UX) yang intuitif sekaligus merancang manajemen database yang terstruktur dan efisien.</p>
+            <a href="#projects" class="btn-editorial">Eksplorasi Karya</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-profile-frame">
+                    <img id="public-foto" src="https://res.cloudinary.com/dppi4jove/image/upload/v1782501546/DSCN3884_cdendp.jpg" alt="Profile Photo">
+                </div>
+                <div class="about-info">
+                    <span class="section-tag">Tentang Saya</span>
+                    <h2 id="public-nama" class="display-title">Velma Khoirunnissa</h2>
+                    <p id="public-bio" class="text-muted">Memadukan kreativitas UI/UX untuk produk digital yang responsif dan user-centered, dengan keahlian manajemen arsitektur database yang terstruktur dan efisien.</p>
+                    <div class="profile-meta-grid">
+                        <div><strong>Universitas:</strong> <span id="pub-univ">UKSW</span></div>
+                        <div><strong>Prodi:</strong> <span id="pub-prodi">Sistem Informasi</span></div>
+                        <div><strong>Email:</strong> <span id="pub-email">velmakhoirunnissa122@gmail.com</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <span class="section-tag center">Keahlian Teknis</span>
+            <h2 class="section-title center">Tools</h2>
+            <div id="public-skills-container" class="skills-flex-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="experience" class="exp-section">
+        <div class="container-narrow">
+            <span class="section-tag center">Rekam Jejak</span>
+            <h2 class="section-title center">Pengalaman</h2>
+            <div id="public-experience-container" class="editorial-timeline">
+                </div>
+        </div>
+    </section>
+
+    <section id="projects" class="project-section">
+        <div class="container">
+            <span class="section-tag">Katalog Proyek</span>
+            <h2 class="section-title">Proyek yang Telah Dibangun</h2>
+            <div id="public-projects-grid" class="asymmetric-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container-form">
+            <div class="form-header">
+                <h2 class="display-title">Mulai Kolaborasi</h2>
+                <p>Kirimkan pesan Anda langsung ke Email saya.</p>
+            </div>
+            <form id="public-contact-form" class="minimal-form">
+                <div class="form-row">
+                    <input type="text" name="nama" placeholder="Nama Lengkap" required autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Alamat Email" required autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <textarea name="pesan" rows="5" placeholder="Detail pesan atau penawaran projek..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit-dark">Kirim Pesan Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="editorial-footer">
+        <p>&copy; 2026 Velma Khoirunnissa. Dirancang secara mandiri.</p>
+    </footer>
+
+    <script src="Frontend/utama/js/script.js"></script>
+</body>
+</html>
